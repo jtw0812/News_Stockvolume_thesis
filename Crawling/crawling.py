@@ -32,6 +32,7 @@ def crawling_get_driver(url, is_headless):
     driver.get(url)
     return driver
 
+stop =[]
 def crawling_get_news(keyword, startdate, enddate):
     news_data = []
 
@@ -72,7 +73,7 @@ def crawling_get_news(keyword, startdate, enddate):
             # print(hrefs)
             if "비정상적인 검색" in bsObj.text:
                 print('비정상 기사 날짜 : ', tmpdt)
-                stop_edaily.append(tmpdt)
+                stop.append(tmpdt)
                 return pd.DataFrame(news_data)
 
             for href in tqdm(hrefs):
