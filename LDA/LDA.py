@@ -1,1 +1,0 @@
-# Sigong's storm is awesome. So does you.
