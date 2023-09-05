@@ -49,7 +49,7 @@ bio = ['삼성바이오로직스','셀트리온','SK바이오사이언스','SK�
 semiconductor = ['삼성전자','한미반도체','DB하이텍','주성엔지니어링','원익IPS','하나마이크론','KEC']
 car =['현대차','기아','KG모빌리티']
 
-start_date = '2008-01-01'
+start_date = '2004-01-01'
 end_date = '2023-08-31'
 
 # bio_stocks = stock_data('bio', bio, stock_mapping)
@@ -58,17 +58,17 @@ end_date = '2023-08-31'
 # bio_stocks.get_all_dataframe()
 # bio_stocks.file_save()
 
-# car_stocks = stock_data('car', car, stock_mapping)
-# car_stocks.get_stock_data(start_date,end_date)
-# car_stocks.get_stock_list()
-# car_stocks.get_all_dataframe()
-# car_stocks.file_save()
+car_stocks = stock_data('car', car, stock_mapping)
+car_stocks.get_stock_data(start_date,end_date)
+car_stocks.get_stock_list()
+car_stocks.get_all_dataframe()
+car_stocks.file_save()
 
-semiconductor_stocks = stock_data('semiconductor', semiconductor, stock_mapping)
-semiconductor_stocks.get_stock_data(start_date,end_date)
-semiconductor_stocks.get_stock_list()
-semiconductor_stocks.get_all_dataframe()
-semiconductor_stocks.file_save()
+# semiconductor_stocks = stock_data('semiconductor', semiconductor, stock_mapping)
+# semiconductor_stocks.get_stock_data(start_date,end_date)
+# semiconductor_stocks.get_stock_list()
+# semiconductor_stocks.get_all_dataframe()
+# semiconductor_stocks.file_save()
 
 # for i, stock in enumerate(bio):
 #     # 종목 데이터를 가져오고 reset_index를 적용
