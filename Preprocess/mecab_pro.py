@@ -63,11 +63,12 @@ stopwords = {
     "다", "%", "대", "만", '억', '있','원','고','도','수','했', "“", "”", '시', "…", "‘", "’"
 }
 
-mecab_my_list = [('')]
+# mecab_my_list = [('')]
 
 def mecab_append(list):
     for i in list:
         mecab.add_dictionary(i[0],i[1])
+
 def get_tokens(text): #내용집어넣으면 바로 ngrams화 해주는 함수 만들기
     tokens = mecab.pos(text)
     return tokens
@@ -85,4 +86,3 @@ def column_tokenize(df, column):
     df['tokens'] = df['first_token'].apply(remove_stopwords)
     return df
 
-# def 

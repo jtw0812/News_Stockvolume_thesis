@@ -5,8 +5,8 @@ import path
 import importlib
 
 import eKoNL as ek
-import mecab_pro as mp
-importlib.reload(mp)
+
+
 
 import gensim
 from gensim import corpora
@@ -24,7 +24,7 @@ from gensim.parsing.preprocessing import STOPWORDS
 #     return lda_model, document, corpus
 
 def get_LDA(document, column, num_topics, random_state, passes):
-    document['ngram_token'] = ek.column_ngramize(document, 'Content')['n_grams'] + mp.column_tokenize(document,'Content')['tokens']
+    document['ngram_token'] = ek.column_ngramize(document, column)['n_grams'] + ek.column_tokenize(document,column)['tokens']
     token = list(document['ngram_token'])  # 텍스트 전처리
     dictionary = corpora.Dictionary(token)
     num_w = [len(doc) for doc in token]

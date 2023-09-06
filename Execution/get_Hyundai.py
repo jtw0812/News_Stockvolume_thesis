@@ -8,7 +8,7 @@ sys.path.append(project_directory)
 sys.path.append(current_directory)
 
 import Data_Collection
-import LASSO
+import Model
 import path
 import eKoNL
 # print(path.current_directory)
