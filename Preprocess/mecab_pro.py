@@ -85,4 +85,16 @@ def column_tokenize(df, column):
     df['tokens'] = df['first_token'].apply(remove_stopwords)
     return df
 
-# def 
+def tokenize(df, column):
+    mpck = MPCK()
+    
+    tokenized_text = []
+    
+    for row in df[column]:
+        tokens = mpck.tokenize(row)
+        tokenized_text.append(tokens)
+    
+    df['tokenized_text'] = tokenized_text
+    
+    return df
+ 
