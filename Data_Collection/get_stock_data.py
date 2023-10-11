@@ -34,7 +34,7 @@ class stock_data():
     
     def get_stock_list(self):                        #어떤 종목들이 인스턴스에 있는지 확인할 수 있음
         print(self.stock_list)
-
+        
     def get_all_dataframe(self):                     #클래스 인스턴스 내의 모든 인스턴스들을 하나의 데이터프레임으로 합침
         self.combined_data = pd.concat(list(self.data_frames.values()), ignore_index=True)
         # setattr(self, f"{self.stock_list}_combined_data", pd.concat(list(self.data_frames.values()), ignore_index=True))
